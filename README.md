@@ -1,0 +1,6 @@
+- 👋 Hi, I’m @AlishanNaqvi
+- 👀 I’m interested in sports and computer science!!
+- 🌱 I’m currently majoring in computer science and statistics
+- 💞️ I’m looking to collaborate on any prohjects
+- 📫 I can be reached through my linkedin: www.linkedin.com/in/alishan-naqvi
+- 😄 Pronouns: he/him

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      /* General Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        background-color: #fff;
+        color: #333;
+        width: 90%;
+        max-width: 900px;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #2575fc;
+        margin-bottom: 1.5rem;
+      }
+
+      .generator-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .options label {
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+        color: #333;
+      }
+
+      .options input[type="checkbox"] {
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+      }
+
+      .tip {
+        font-size: 0.8rem;
+        color: #787a91;
+        margin-left: 30px;
+      }
+
+      .password-results {
+        width: 100%;
+        max-width: 500px;
+        margin: 2rem auto 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .password-result {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 0.75rem 1rem;
+        font-family: "Poppins", sans-serif;
+        border-radius: 6px;
+      }
+
+      .password-result input {
+        border: none;
+        background-color: transparent;
+        font-size: 1.1rem;
+        flex-grow: 1;
+      }
+
+      .password-result input:focus {
+        outline: none;
+      }
+
+      .copy-btn {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .copy-btn:hover {
+        background-color: #45a049;
+      }
+
+      .generate-btn {
+        background-color: #2575fc;
+        color: white;
+        border: none;
+        font-family: "Poppins", sans-serif;
+        padding: 0.75rem 2rem;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        margin-top: 1.5rem;
+      }
+
+      .generate-btn:hover {
+        background-color: #1e63d2;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .options {
+          grid-template-columns: 1fr;
+        }
+
+        .generate-btn {
+          width: 100%;
+        }
+
+        .password-result {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Generator</h1>
+      <form class="generator-form">
+        <!-- Options -->
+        <div class="options">
+          <label for="numbers">
+            <input type="checkbox" id="numbers" checked />
+            Numbers
+          </label>
+          <label for="uppercases">
+            <input type="checkbox" id="uppercases" checked />
+            Uppercase Letters
+          </label>
+          <label for="lowercases">
+            <input type="checkbox" id="lowercases" checked />
+            Lowercase Letters
+          </label>
+          <label for="symbols">
+            <input type="checkbox" id="symbols" checked />
+            Symbols
+          </label>
+        </div>
+
+        <!-- Password Results -->
+        <div class="password-results">
+          <div class="password-result">
+            <input type="text" id="password-1" readonly />
+            <button class="copy-btn" type="button" onclick="copyPassword('password-1')">Copy</button>
+          </div>
+          <div class="password-result">
+            <input type="text" id="password-2" readonly />
+            <button class="copy-btn" type="button" onclick="copyPassword('password-2')">Copy</button>
+          </div>
+          <div class="password-result">
+            <input type="text" id="password-3" readonly />
+            <button class="copy-btn" type="button" onclick="copyPassword('password-3')">Copy</button>
+          </div>
+        </div>
+
+        <!-- Generate Button -->
+        <button type="button" class="generate-btn" onclick="generatePasswords()">Generate</button>
+      </form>
+    </div>
+
+    <script>
+      // Function to Copy Password
+      function copyPassword(id) {
+        const password = document.getElementById(id);
+        password.select();
+        password.setSelectionRange(0, 99999);
+        document.execCommand('copy');
+        alert('Password copied: ' + password.value);
+      }
+
+      // Function to Generate Random Passwords
+      function generatePasswords() {
+        const includeNumbers = document.getElementById('numbers').checked;
+        const includeUppercases = document.getElementById('uppercases').checked;
+        const includeLowercases = document.getElementById('lowercases').checked;
+        const includeSymbols = document.getElementById('symbols').checked;
+
+        const numbers = '0123456789';
+        const upperCases = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const lowerCases = 'abcdefghijklmnopqrstuvwxyz';
+        const symbols = '!@#$%^&*()_+[]{}|;:,.<>?';
+
+        let charPool = '';
+
+        if (includeNumbers) charPool += numbers;
+        if (includeUppercases) charPool += upperCases;
+        if (includeLowercases) charPool += lowerCases;
+        if (includeSymbols) charPool += symbols;
+
+        function generateRandomPassword(length) {
+          let password = '';
+          for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * charPool.length);
+            password += charPool[randomIndex];
+          }
+          return password;
+        }
+
+        document.getElementById('password-1').value = generateRandomPassword(12);
+        document.getElementById('password-2').value = generateRandomPassword(12);
+        document.getElementById('password-3').value = generateRandomPassword(12);
+      }
+    </script>
+  </body>
+</html>

@@ -15,21 +15,6 @@ Based in Toronto, I am a double major in **Computer Science & Statistics** speci
 ---
 ### 💡 What I Work With:
 
-### Hi there, I'm Alishan! 👋
-
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alishan-naqvi/)
-[![Portfolio](https://img.shields.io/badge/-Portfolio-000?style=flat-square&logo=react&logoColor=white)](https://alishannaqvi.netlify.app/)
-[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/AlishanNaqvi)
-
-Based in Toronto, I am a **Computer Science Major** specializing in **Full-Stack Development**!
-
-My journey is fueled by an unmatched passion for **software engineering** and a deep love for **programming**. With a **GitHub streak of over 700 days**, I'm constantly pushing myself to grow and explore new technologies.
-
-I aspire to become a **1000x developer**, bringing to life anything you can imagine. **Stay tuned for some crazy projects!**
-
----
-### 💡 What I Work With:
-
 #### 📜 Programming Languages
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Java](https://img.shields.io/badge/-Java-007396?style=flat-square&logo=java&logoColor=white)

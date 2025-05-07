@@ -9,8 +9,8 @@ Based in Toronto, I am a double major in **Computer Science & Statistics** speci
 ‬Certified in **Harvard's CS50x and Blockchain Council's Prompt Engineering**, I bring a strong set of skills in‬‭ systems‬‭ programming‬‭. Proficient in‬‭ **Go**, **Python‬‭**, **React**‬, **HTML/CSS**,‬‭ **Javascript**, and **Java‬‭**, with experience in numerous‬‭ work‬‭ positions. I deliver innovative, high-impact solutions while being able to collaborate effectively in team environments.‬I aspire to become a **1000x developer**, bringing to life anything you can imagine. **Stay tuned for some crazy projects!**
 
 - 🚀 **Co-founder of ScorpioCustoms Ltd.**
-- 💻 **Interning at Weel**
-- 🔥 **Dev team member at Evolvere**
+- 💻 **Full-Stack Software Engineer Intern at Weel**
+- 🔥 **App Developer Intern at Evolvere**
 
 ---
 ### 💡 What I Work With:

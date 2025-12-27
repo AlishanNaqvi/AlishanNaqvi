@@ -4,7 +4,7 @@
 [![Portfolio](https://img.shields.io/badge/-Portfolio-000?style=flat-square&logo=react&logoColor=white)](https://alishanslab.netlify.app/)
 [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/AlishanNaqvi)
 
-Based in Toronto, I am a UofT Undergrad studuying **Computer Science, Statistics & Mathematics** specializing in **Full-Stack Development**!
+Based in Toronto, I am a UofT Undergrad studying **Computer Science, Statistics & Mathematics** specializing in **Full-Stack Development**!
 
 ‬Certified in **Harvard's CS50x and Blockchain Council's Prompt Engineering**, I bring a strong set of skills in‬‭ systems‬‭ programming‬‭. Proficient in‬‭ **Go**, **Python‬‭**, **React**‬, **HTML/CSS**,‬‭ **Javascript**, and **Java‬‭**, with experience in numerous‬‭ work‬‭ positions. I deliver innovative, high-impact solutions while being able to collaborate effectively in team environments. ‬I aspire to become a **1000x developer**, bringing to life anything you can imagine. **Stay tuned for some crazy projects!**
 
